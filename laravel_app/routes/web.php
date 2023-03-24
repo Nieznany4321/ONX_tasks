@@ -16,3 +16,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/user', function () {
+    \App\Models\Client::create([
+        'name' => 'Dawid',
+        'email' => 'dawid123wilk@outlook.com',
+        'password' => 'idianCountry'
+    ]);
+    \App\Models\Client::create([
+        'name' => 'Paulina',
+        'email' => 'paulina_wilk@outlook.com',
+        'password' => 'usCountry'
+    ]);
+    \App\Models\Client::create([
+        'name' => 'Kamil',
+        'email' => 'kamil_wilk@outlook.com',
+        'password' => 'ukCountry'
+    ]);
+    
+                
+});
