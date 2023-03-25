@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class carsNotify extends Notification
+class CarsNotify extends Notification
 {
     use Queueable;
     private $carsAssigned;
