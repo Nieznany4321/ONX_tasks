@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    use HasFactory;
+     /**
+     * @var array
+     */
+    protected $fillable =['order_name', 'client_id'];
     public function client()
     {
         return $this->belongsTo('App\Models\Client');

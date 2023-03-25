@@ -7,20 +7,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
-    use HasFactory;
-    protected $fillable =['name', 'email', 'password',];
+    
+    /**
+     * @var array
+     */
+    
+    protected $fillable =['name', 'email','password'];
 
     protected $hidden = [
         'password', 'remember_token',
     ];
 
-    public function phone()
+    public function employee()
     {
-        return $this->hasOne('App\Models\Employee');
+        return $this->hasOne(Employee::class);
     }
     public function order()
     {
-        return $this->hasOne('App\Models\Order');
+        return $this->hasOne(Order::class);
     }
+
 
 }

@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Employee extends Model
 {
-    use HasFactory;
-
+     /**
+     * @var array
+     */
+    protected $fillable =['phone', 'client_id'];
     public function client()
     {
         return $this->belongsTo('App\Models\Client');
